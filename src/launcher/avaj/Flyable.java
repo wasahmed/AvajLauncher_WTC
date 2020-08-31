@@ -2,5 +2,5 @@ package launcher.avaj;
 
 public interface Flyable {
     void updateConditions();
-    void registerTower(WeatherProvider weatherProvider);
+    void registerTower(WeatherTower weatherTower);
 }
