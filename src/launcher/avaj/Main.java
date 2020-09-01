@@ -48,6 +48,8 @@ public class Main {
                     weatherTower.changeWeather();
                 }
             }
+            else
+                System.out.println("File is empty");
         }catch (FileNotFoundException e){
             System.out.println("Couldn't find file " + args[0]);
         }catch (IOException e){

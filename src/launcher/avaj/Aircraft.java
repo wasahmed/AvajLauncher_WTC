@@ -13,6 +13,6 @@ public abstract class Aircraft {
     }
 
     private long nextId(){
-        return idCounter = idCounter+ 1;
+        return ++idCounter;
     }
 }

@@ -34,10 +34,10 @@ public class JetPlane extends Aircraft implements Flyable {
                 simGenerator.writeMessage("Jetplane#" + this.name + "(" + this.id + ")" + " its a icy day");
                 break;
         }
-        if (updatedHeight > 100)
-            this.coordinates = new Coordinates(updatedLongitude,updatedLatitude, 100);
+        if (coordinates.getHeight() > 100)
+            this.coordinates = new Coordinates(coordinates.getLongitude(),coordinates.getLatitude(), 100);
 
-        if (updatedHeight <= 0){
+        if (coordinates.getHeight() <= 0){
             simGenerator.writeMessage("Tower says: Jetplane#" + this.name + "(" + this.id + ")" + " landed");
             simGenerator.writeMessage("Tower says: Jetplane#" + this.name + "(" + this.id + ")" + " UNREGISTERED");
             this.weatherTower.unregister(this);

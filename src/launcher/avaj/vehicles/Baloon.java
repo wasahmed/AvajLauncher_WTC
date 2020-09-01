@@ -34,10 +34,10 @@ public class Baloon extends Aircraft implements Flyable {
                 simGenerator.writeMessage("Baloon#" + this.name + "(" + this.id + ")" + " its a icy day");
                 break;
         }
-        if (updatedHeight > 100)
-            this.coordinates = new Coordinates(updatedLongitude,updatedLatitude, 100);
+        if (this.coordinates.getHeight() > 100)
+            this.coordinates = new Coordinates(coordinates.getLongitude(),coordinates.getLatitude(), 100);
 
-        if (updatedHeight <= 0){
+        if (this.coordinates.getHeight() <= 0){
             simGenerator.writeMessage("Tower says: Baloon#" + this.name + "(" + this.id + ")" + " landed");
             simGenerator.writeMessage("Tower says: Baloon#" + this.name + "(" + this.id + ")" + " UNREGISTERED");
             this.weatherTower.unregister(this);
